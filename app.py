@@ -1,5 +1,4 @@
 from flask import Flask
-from backend.api.menuitem import CategoriaResource
 from flask_restful import Api
 from backend.config.db import db, ma, app
 
@@ -18,7 +17,6 @@ app.register_blueprint(ruta_reviews, url_prefix='/api')
 app.register_blueprint(ruta_services, url_prefix='/api')
 app.register_blueprint(ruta_baths, url_prefix='/api')
 app.register_blueprint(ruta_reservas, url_prefix='/api')
-api.add_resource(CategoriaResource, '/categorias')
 
 @app.route('/')
 def index():
